@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Country</th>
+    <th scope="col">Area</th>
+    <th scope="col">Population</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let building of buildings; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+      <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + building.image" class="mr-2" style="width: 200px">
+      {{ building.name }}
+    </td>
+    <td>{{ building.addressLine }}</td>
+    <td>{{ building.foundationYear | number }}</td>
+  </tr>
+  </tbody>
+</table>
